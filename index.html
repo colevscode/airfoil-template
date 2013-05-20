@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>A Backlift Airfoil App</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    {{$styles}}
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="hero-unit">
+        <div class="row">
+
+          <div class="span4">
+            <h1>An&nbsp;Airfoil Website</h1>
+          </div>
+          <div class="span6">
+            <h3> This website is a test of airfoil. <br>
+              You are visiting the 
+              {{$test default}} default     {{$endtest}}
+              {{$test variant}} alternative {{$endtest}}
+              variant.
+            </h3>
+            <p>We have already logged a new visit for this session</p>
+            <form id="mainform">
+              <input type="submit" class="btn btn-primary btn-large" value="Click here to complete {{$test variant}}NOW!{{$endtest}}">
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <h3>Other cool shit todo:</h3>
+      <pre>// This will show you the current day's events:
+// (admin login required)
+$.get('/backlift/analytics/current', function(data){console.log(data)})
+
+// This will show you the last month of events:
+// (Some time must pass first in order to see some daily rollups) (admin login required)
+$.get('/backlift/analytics/history', function(data){console.log(data)})
+      </pre>
+
+    </div>   
+    {{$scripts}}
+  </body>
+</html>
