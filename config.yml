@@ -84,9 +84,6 @@ packages:
 require:
 - include
 
-redirect_to_https: no
-session_secure: no
-
 # this turns on event/visit tracking
 analytics: yes
 
